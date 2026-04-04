@@ -5,22 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>James Hunt - Software Developer</title>
 
-<!-- Open Graph for iMessage / social link previews -->
 <meta property="og:title" content="James Hunt">
-<meta property="og:description" content="Software Developer | Web, iOS, Python, JavaScript">
+<meta property="og:description" content="Software Developer - Jacksonville, FL">
 <meta property="og:image" content="https://jmh3434.github.io/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:url" content="https://jmh3434.github.io">
 <meta property="og:type" content="profile">
-
-<!-- Twitter card fallback -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="James Hunt">
-<meta name="twitter:description" content="Software Developer | Web, iOS, Python, JavaScript">
+<meta name="twitter:description" content="Software Developer - Jacksonville, FL">
 <meta name="twitter:image" content="https://jmh3434.github.io/og-image.png">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
@@ -28,187 +25,125 @@
     justify-content: center;
     align-items: center;
     min-height: 100dvh;
-    background: #0a0a0a;
-    font-family: 'Inter', -apple-system, sans-serif;
-    padding: 20px;
+    background: #f5f5f4;
+    font-family: 'DM Sans', -apple-system, sans-serif;
+    padding: 24px;
+    -webkit-font-smoothing: antialiased;
   }
   .card {
     width: 100%;
-    max-width: 400px;
-    background: linear-gradient(165deg, #111111 0%, #1a1a1a 100%);
-    border-radius: 24px;
-    border: 1px solid rgba(255,255,255,0.08);
+    max-width: 380px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.06);
     overflow: hidden;
-    position: relative;
   }
-  .card::before {
-    content: '';
-    position: absolute;
-    top: -1px;
-    left: 40px;
-    right: 40px;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #4a9eff, #7c5cfc, transparent);
-    border-radius: 2px;
-  }
-  .top {
-    padding: 44px 32px 0;
+  .header {
+    padding: 36px 28px 28px;
+    border-bottom: 1px solid #f0eeeb;
   }
   .name {
-    font-size: 34px;
-    font-weight: 800;
-    color: #fff;
-    letter-spacing: -0.5px;
-    line-height: 1.1;
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1.15;
+    letter-spacing: -0.3px;
   }
-  .tagline {
+  .role {
     font-size: 15px;
+    color: #6b6b6b;
+    margin-top: 4px;
     font-weight: 400;
-    color: rgba(255,255,255,0.45);
-    margin-top: 8px;
-    letter-spacing: 0.2px;
   }
-  .chips {
-    display: flex;
-    gap: 8px;
-    margin-top: 20px;
-    flex-wrap: wrap;
+  .location {
+    font-size: 13px;
+    color: #999;
+    margin-top: 2px;
   }
-  .chip {
-    padding: 6px 14px;
-    border-radius: 100px;
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 0.3px;
-    border: 1px solid rgba(255,255,255,0.1);
-    color: rgba(255,255,255,0.6);
-    background: rgba(255,255,255,0.04);
+  .body {
+    padding: 20px 28px 28px;
   }
-  .chip.accent {
-    border-color: rgba(74,158,255,0.3);
-    color: #4a9eff;
-    background: rgba(74,158,255,0.08);
-  }
-  .divider {
-    height: 1px;
-    background: rgba(255,255,255,0.06);
-    margin: 28px 32px;
-  }
-  .details {
-    padding: 0 32px 36px;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-  }
-  .row {
+  .contact-item {
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 12px;
+    padding: 10px 0;
     text-decoration: none;
-    transition: opacity 0.2s;
+    border-bottom: 1px solid #f5f3f0;
   }
-  .row:active { opacity: 0.7; }
-  .icon-wrap {
-    width: 40px;
-    height: 40px;
-    border-radius: 12px;
-    background: rgba(255,255,255,0.05);
+  .contact-item:last-child {
+    border-bottom: none;
+  }
+  .contact-icon {
+    width: 32px;
+    height: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
   }
-  .icon-wrap svg {
-    width: 18px;
-    height: 18px;
-    fill: rgba(255,255,255,0.4);
+  .contact-icon svg {
+    width: 20px;
+    height: 20px;
   }
-  .row-text {
-    display: flex;
-    flex-direction: column;
-  }
-  .label {
-    font-size: 10px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    color: rgba(255,255,255,0.25);
-    margin-bottom: 2px;
-  }
-  .value {
-    font-size: 14px;
+  .contact-text {
+    font-size: 15px;
     font-weight: 500;
-    color: rgba(255,255,255,0.85);
+    color: #1a1a1a;
   }
-  .bottom-bar {
-    background: rgba(255,255,255,0.03);
-    border-top: 1px solid rgba(255,255,255,0.06);
-    padding: 16px 32px;
+  .footer {
+    background: #fafaf9;
+    border-top: 1px solid #f0eeeb;
+    padding: 16px 28px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  .school {
-    font-size: 12px;
-    font-weight: 500;
-    color: rgba(255,255,255,0.3);
-    letter-spacing: 0.3px;
+  .edu {
+    font-size: 13px;
+    color: #999;
   }
-  .school span {
-    color: #7aabd4;
+  .edu strong {
+    color: #6b6b6b;
+    font-weight: 600;
   }
-  .location {
-    font-size: 12px;
-    color: rgba(255,255,255,0.25);
-    font-weight: 400;
+  .skills {
+    font-size: 11px;
+    color: #bbb;
+    letter-spacing: 0.5px;
   }
 </style>
 </head>
 <body>
 <div class="card">
-  <div class="top">
-    <div class="name">James<br>Hunt</div>
-    <div class="tagline">Software Developer</div>
-    <div class="chips">
-      <span class="chip accent">Web Development</span>
-      <span class="chip">iOS</span>
-      <span class="chip">Python</span>
-      <span class="chip">JavaScript</span>
-    </div>
+  <div class="header">
+    <div class="name">James Hunt</div>
+    <div class="role">Software Developer</div>
+    <div class="location">Jacksonville, FL</div>
   </div>
-  <div class="divider"></div>
-  <div class="details">
-    <a class="row" href="tel:+19049317666">
-      <div class="icon-wrap">
-        <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>
+  <div class="body">
+    <a class="contact-item" href="tel:+18282890865">
+      <div class="contact-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
       </div>
-      <div class="row-text">
-        <span class="label">Phone</span>
-        <span class="value">(904) 931-7666</span>
-      </div>
+      <span class="contact-text">(828) 289-0865</span>
     </a>
-    <a class="row" href="mailto:jmh3434@gmail.com">
-      <div class="icon-wrap">
-        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+    <a class="contact-item" href="mailto:jmh3434@gmail.com">
+      <div class="contact-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
       </div>
-      <div class="row-text">
-        <span class="label">Email</span>
-        <span class="value">jmh3434@gmail.com</span>
-      </div>
+      <span class="contact-text">jmh3434@gmail.com</span>
     </a>
-    <a class="row" href="https://www.linkedin.com/in/james-hunt-277232ab/">
-      <div class="icon-wrap">
-        <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14m-.5 15.5v-5.3a3.26 3.26 0 00-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 011.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 001.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 00-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+    <a class="contact-item" href="https://www.linkedin.com/in/james-hunt-277232ab/">
+      <div class="contact-icon">
+        <svg viewBox="0 0 24 24" fill="#1a1a1a"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14m-.5 15.5v-5.3a3.26 3.26 0 00-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 011.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 001.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 00-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
       </div>
-      <div class="row-text">
-        <span class="label">LinkedIn</span>
-        <span class="value">linkedin.com/in/james-hunt</span>
-      </div>
+      <span class="contact-text">LinkedIn</span>
     </a>
   </div>
-  <div class="bottom-bar">
-    <span class="school"><span>UNC Chapel Hill</span> '18 - CS</span>
-    <span class="location">Jacksonville, FL</span>
+  <div class="footer">
+    <span class="edu"><strong>UNC Chapel Hill</strong> '18</span>
+    <span class="skills">CS</span>
   </div>
 </div>
 </body>
