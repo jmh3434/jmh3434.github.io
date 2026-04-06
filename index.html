@@ -41,34 +41,38 @@
     border: 1px solid #2a2b30;
   }
 
-  /* Header */
+  /* Header - centered, clean */
   .header {
-    padding: 40px 30px 24px;
+    padding: 44px 30px 28px;
+    text-align: center;
     background: linear-gradient(180deg, #22232a 0%, #1c1d21 100%);
   }
-  .header-top {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    margin-bottom: 16px;
-  }
   .photo {
-    width: 56px;
-    height: 56px;
+    width: 72px;
+    height: 72px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid #2a2b30;
+    margin-bottom: 16px;
   }
-  .location-badge {
-    display: flex;
+  .name {
+    font-size: 26px;
+    font-weight: 700;
+    color: #f0f0f2;
+    letter-spacing: -0.3px;
+  }
+  .role {
+    font-size: 15px;
+    color: #7c7d85;
+    margin-top: 3px;
+  }
+  .location {
+    display: inline-flex;
     align-items: center;
     gap: 5px;
-    padding: 6px 12px;
-    background: rgba(255,255,255,0.06);
-    border-radius: 20px;
-    font-size: 12px;
-    color: #8a8b92;
-    font-weight: 500;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #5a5b63;
   }
   .location-dot {
     width: 6px;
@@ -76,44 +80,21 @@
     border-radius: 50%;
     background: #3dd68c;
   }
-  .name {
-    font-size: 26px;
-    font-weight: 700;
-    color: #f0f0f2;
-    letter-spacing: -0.3px;
-    line-height: 1.2;
-  }
-  .role {
-    font-size: 15px;
-    color: #7c7d85;
-    margin-top: 3px;
-    font-weight: 400;
-  }
 
-  /* About */
-  .about {
+  /* What I Build */
+  .services {
     padding: 0 30px;
-    margin-bottom: 20px;
-  }
-  .about-text {
-    font-size: 14px;
-    line-height: 1.55;
-    color: #9a9ba3;
-  }
-
-  /* Skills row */
-  .skills {
-    padding: 0 30px;
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
     margin-bottom: 24px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
   }
-  .skill {
-    padding: 5px 12px;
+  .service {
+    padding: 6px 14px;
     border-radius: 8px;
-    font-size: 12px;
-    font-weight: 600;
+    font-size: 13px;
+    font-weight: 500;
     color: #b0b1b9;
     background: rgba(255,255,255,0.05);
     border: 1px solid rgba(255,255,255,0.07);
@@ -125,7 +106,7 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-    margin: 0 30px 20px;
+    margin: 0 30px 12px;
     padding: 14px 20px;
     background: #2d6cdf;
     border-radius: 14px;
@@ -134,150 +115,106 @@
   }
   .save-btn:active { background: #2560c7; }
   .save-btn svg { width: 20px; height: 20px; stroke: #fff; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-  .save-btn span {
-    font-size: 15px;
-    font-weight: 600;
-    color: #fff;
-    letter-spacing: 0.2px;
-  }
+  .save-btn span { font-size: 15px; font-weight: 600; color: #fff; }
 
   /* Share button */
   .share-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 8px;
     margin: 0 30px 24px;
-    padding: 12px 20px;
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.1);
+    padding: 11px 20px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
     border-radius: 14px;
-    text-decoration: none;
     cursor: pointer;
     transition: background 0.15s;
   }
   .share-btn:active { background: rgba(255,255,255,0.1); }
-  .share-btn svg { width: 18px; height: 18px; stroke: #8a8b92; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-  .share-btn span {
-    font-size: 14px;
-    font-weight: 500;
-    color: #8a8b92;
-  }
+  .share-btn svg { width: 16px; height: 16px; stroke: #6a6b73; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .share-btn span { font-size: 13px; font-weight: 500; color: #6a6b73; }
   .share-btn.hidden { display: none; }
 
   /* Divider */
-  .divider {
-    height: 1px;
-    background: #2a2b30;
-    margin: 0 30px;
-  }
+  .divider { height: 1px; background: #2a2b30; margin: 0 30px; }
 
-  /* Contact */
+  /* Contact rows */
   .contact {
-    padding: 20px 30px 28px;
+    padding: 16px 22px 20px;
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 2px;
   }
   .contact-item {
     display: flex;
     align-items: center;
     gap: 14px;
-    padding: 12px 14px;
+    padding: 11px 12px;
     border-radius: 12px;
     text-decoration: none;
     transition: background 0.15s;
   }
-  .contact-item:hover { background: rgba(255,255,255,0.04); }
   .contact-item:active { background: rgba(255,255,255,0.06); }
   .ci-icon {
-    width: 36px;
-    height: 36px;
+    width: 34px;
+    height: 34px;
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
   }
-  .ci-icon svg { width: 18px; height: 18px; }
-  .ci-icon.phone { background: rgba(61,214,140,0.12); }
-  .ci-icon.phone svg { stroke: #3dd68c; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-  .ci-icon.email { background: rgba(45,108,223,0.12); }
-  .ci-icon.email svg { stroke: #2d6cdf; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-  .ci-icon.linkedin { background: rgba(10,102,194,0.12); }
-  .ci-icon.linkedin svg { fill: #0a66c2; }
-  .ci-info { display: flex; flex-direction: column; }
-  .ci-label {
-    font-size: 11px;
-    font-weight: 600;
-    color: #5a5b63;
-    text-transform: uppercase;
-    letter-spacing: 0.6px;
-  }
+  .ci-icon svg { width: 17px; height: 17px; }
+  .ci-icon.green { background: rgba(61,214,140,0.12); }
+  .ci-icon.green svg { stroke: #3dd68c; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .ci-icon.blue { background: rgba(45,108,223,0.12); }
+  .ci-icon.blue svg { stroke: #2d6cdf; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .ci-icon.li { background: rgba(10,102,194,0.12); }
+  .ci-icon.li svg { fill: #0a66c2; }
   .ci-value {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 500;
-    color: #e0e0e4;
-    margin-top: 1px;
+    color: #d0d0d4;
   }
 
   /* Footer */
   .footer {
     border-top: 1px solid #2a2b30;
-    padding: 16px 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    padding: 14px 30px;
+    text-align: center;
     background: rgba(0,0,0,0.15);
-  }
-  .edu {
-    font-size: 13px;
-    color: #5a5b63;
-  }
-  .edu strong {
-    color: #8a8b92;
-    font-weight: 600;
-  }
-  .year {
     font-size: 12px;
     color: #44454d;
-    font-weight: 500;
   }
+  .footer strong { color: #6a6b73; font-weight: 600; }
 </style>
 </head>
 <body>
 <div class="card">
   <div class="header">
-    <div class="header-top">
-      <img class="photo" src="photo.png" alt="James Hunt">
-      <div class="location-badge">
-        <div class="location-dot"></div>
-        Jacksonville, FL
-      </div>
-    </div>
+    <img class="photo" src="photo.png" alt="James Hunt">
     <div class="name">James Hunt</div>
     <div class="role">Software Developer</div>
+    <div class="location">
+      <div class="location-dot"></div>
+      Jacksonville, FL
+    </div>
   </div>
 
-  <div class="about">
-    <p class="about-text">Full-stack developer and technical educator. I build production systems and teach teams how to ship.</p>
-  </div>
-
-  <div class="skills">
-    <span class="skill">Python</span>
-    <span class="skill">JavaScript</span>
-    <span class="skill">Swift / iOS</span>
-    <span class="skill">Django</span>
-    <span class="skill">Java</span>
+  <div class="services">
+    <span class="service">Websites</span>
+    <span class="service">iOS Apps</span>
+    <span class="service">Web Apps</span>
   </div>
 
   <a class="save-btn" href="james-hunt.vcf">
-    <svg viewBox="0 0 24 24"><path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+    <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4-4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>
     <span>Save Contact</span>
   </a>
 
   <div class="share-btn hidden" id="shareBtn" onclick="shareCard()">
-    <svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+    <svg viewBox="0 0 24 24"><path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
     <span>Share This Card</span>
   </div>
 
@@ -285,46 +222,33 @@
 
   <div class="contact">
     <a class="contact-item" href="tel:+18282890865">
-      <div class="ci-icon phone">
+      <div class="ci-icon green">
         <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
       </div>
-      <div class="ci-info">
-        <span class="ci-label">Call</span>
-        <span class="ci-value">(828) 289-0865</span>
-      </div>
+      <span class="ci-value">(828) 289-0865</span>
     </a>
     <a class="contact-item" href="sms:+18282890865">
-      <div class="ci-icon" style="background:rgba(61,214,140,0.12)">
-        <svg viewBox="0 0 24 24" style="stroke:#3dd68c;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+      <div class="ci-icon green">
+        <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
       </div>
-      <div class="ci-info">
-        <span class="ci-label">Text</span>
-        <span class="ci-value">Send a message</span>
-      </div>
+      <span class="ci-value">Text me</span>
     </a>
     <a class="contact-item" href="mailto:jmh3434@gmail.com">
-      <div class="ci-icon email">
+      <div class="ci-icon blue">
         <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
       </div>
-      <div class="ci-info">
-        <span class="ci-label">Email</span>
-        <span class="ci-value">jmh3434@gmail.com</span>
-      </div>
+      <span class="ci-value">jmh3434@gmail.com</span>
     </a>
     <a class="contact-item" href="https://www.linkedin.com/in/james-hunt-277232ab/">
-      <div class="ci-icon linkedin">
+      <div class="ci-icon li">
         <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14m-.5 15.5v-5.3a3.26 3.26 0 00-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 011.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 001.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 00-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
       </div>
-      <div class="ci-info">
-        <span class="ci-label">LinkedIn</span>
-        <span class="ci-value">Connect with me</span>
-      </div>
+      <span class="ci-value">LinkedIn</span>
     </a>
   </div>
 
   <div class="footer">
-    <span class="edu"><strong>UNC Chapel Hill</strong> - Computer Science</span>
-    <span class="year">'18</span>
+    <strong>UNC Chapel Hill</strong> '18 - Computer Science
   </div>
 </div>
 <script>
