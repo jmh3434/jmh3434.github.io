@@ -119,6 +119,52 @@
     border: 1px solid rgba(255,255,255,0.07);
   }
 
+  /* Save Contact CTA */
+  .save-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 30px 20px;
+    padding: 14px 20px;
+    background: #2d6cdf;
+    border-radius: 14px;
+    text-decoration: none;
+    transition: background 0.15s;
+  }
+  .save-btn:active { background: #2560c7; }
+  .save-btn svg { width: 20px; height: 20px; stroke: #fff; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .save-btn span {
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 0.2px;
+  }
+
+  /* Share button */
+  .share-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 30px 24px;
+    padding: 12px 20px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .share-btn:active { background: rgba(255,255,255,0.1); }
+  .share-btn svg { width: 18px; height: 18px; stroke: #8a8b92; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .share-btn span {
+    font-size: 14px;
+    font-weight: 500;
+    color: #8a8b92;
+  }
+  .share-btn.hidden { display: none; }
+
   /* Divider */
   .divider {
     height: 1px;
@@ -225,6 +271,16 @@
     <span class="skill">Java</span>
   </div>
 
+  <a class="save-btn" href="james-hunt.vcf">
+    <svg viewBox="0 0 24 24"><path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+    <span>Save Contact</span>
+  </a>
+
+  <div class="share-btn hidden" id="shareBtn" onclick="shareCard()">
+    <svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+    <span>Share This Card</span>
+  </div>
+
   <div class="divider"></div>
 
   <div class="contact">
@@ -235,6 +291,15 @@
       <div class="ci-info">
         <span class="ci-label">Call</span>
         <span class="ci-value">(828) 289-0865</span>
+      </div>
+    </a>
+    <a class="contact-item" href="sms:+18282890865">
+      <div class="ci-icon" style="background:rgba(61,214,140,0.12)">
+        <svg viewBox="0 0 24 24" style="stroke:#3dd68c;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+      </div>
+      <div class="ci-info">
+        <span class="ci-label">Text</span>
+        <span class="ci-value">Send a message</span>
       </div>
     </a>
     <a class="contact-item" href="mailto:jmh3434@gmail.com">
@@ -262,5 +327,11 @@
     <span class="year">'18</span>
   </div>
 </div>
+<script>
+if (navigator.share) document.getElementById('shareBtn').classList.remove('hidden');
+function shareCard() {
+  navigator.share({ title: 'James Hunt', text: 'Software Developer', url: 'https://jmh3434.github.io' });
+}
+</script>
 </body>
 </html>

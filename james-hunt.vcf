@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Hunt;James;;;
+FN:James Hunt
+TITLE:Software Developer
+TEL;TYPE=CELL:+18282890865
+EMAIL;TYPE=INTERNET:jmh3434@gmail.com
+URL:https://www.linkedin.com/in/james-hunt-277232ab/
+ADR;TYPE=HOME:;;Jacksonville;;FL;;US
+NOTE:Full-stack developer - Python, JavaScript, Swift/iOS, Django, Java. UNC Chapel Hill '18.
+END:VCARD
